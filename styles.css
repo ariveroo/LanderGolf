@@ -1,0 +1,230 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f3e8ff; /* Pastel morado */
+    color: #4a3f55; /* Morado oscuro */
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background: #b185db; /* Pastel morado oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slogan {
+    font-size: 1.2em;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffe082; /* Pastel naranja claro */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #b185db, #f9c6ff); /* Gradiente morado */
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button {
+    background: #ffab91; /* Pastel naranja */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: #ff8a65; /* Pastel naranja oscuro */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #f9c6ff; /* Pastel morado claro */
+}
+
+.features article {
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.features article:hover {
+    transform: translateY(-10px);
+}
+
+.features h3 {
+    color: #4a3f55;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.features p {
+    color: #6a6177;
+    font-size: 1em;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    background: #e5d1ff; /* Pastel morado muy claro */
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4a3f55;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1.1em;
+    color: #4a3f55;
+    line-height: 1.8em;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f3e8ff;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4a3f55;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #b185db; /* Pastel morado oscuro */
+}
+
+.contact button {
+    background: #ffab91;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background: #ff8a65;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 10px;
+    background: #4a3f55;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features article {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
